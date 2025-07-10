@@ -33,5 +33,16 @@ public class OrderService
         
     }
 
+    public void AddDelivery(Guid id, Delivery delivery)
+    {
+        Order order = _orderRepository.GetOrder(id);
+        if (order == null)
+        { 
+            Console.WriteLine($"Order with id {id} was not found");
+            return;
+        }
+        order.Deliveries.Add(delivery);
+    }
+
    
 }
