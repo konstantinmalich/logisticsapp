@@ -11,6 +11,7 @@ public class Order
         Cost = cost;
         Status = OrderStatus.Pending;
     }
+    public List<Delivery> Deliveries { get; set; } = new List<Delivery>();
     public OrderStatus Status { get; private set; }
     public double Cost { get; set; }
 

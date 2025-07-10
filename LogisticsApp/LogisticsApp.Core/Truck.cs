@@ -2,9 +2,19 @@ namespace LogisticsApp.Core;
 
 public class Truck
 {
-    public int Id { get; set; }
-    
-    public string Name { get; set; }
-    
+    public Truck(string brand, TruckType type, double capacity, string plates)
+    {
+        Brand = brand;
+        Type = type;
+        Capacity = capacity;
+        Plates = plates;
+    }
+
     public string Brand { get; set; }
+    
+    public TruckType Type { get; set; }
+    
+    public double Capacity { get; set; }
+    
+    public string Plates { get; set; }
 }
